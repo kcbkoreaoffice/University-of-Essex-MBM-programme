@@ -122,9 +122,9 @@ export function Footer() {
             <div>
               <p className="font-bold mb-6 text-essex-purple uppercase tracking-widest text-xs">University</p>
               <ul className="space-y-4 text-sm text-white/70">
-                <li><a href="#" className="hover:text-white">학위 소개</a></li>
-                <li><a href="#" className="hover:text-white">왜 MBM인가?</a></li>
-                <li><a href="#" className="hover:text-white">교수진 소개</a></li>
+                <li><a href="#why-essex" className="hover:text-white">학위 소개</a></li>
+                <li><a href="#why-mbm" className="hover:text-white">왜 MBM인가?</a></li>
+                <li><a href="#subjects" className="hover:text-white">과목 소개</a></li>
               </ul>
             </div>
             <div>

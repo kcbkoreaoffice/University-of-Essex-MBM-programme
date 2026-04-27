@@ -14,7 +14,13 @@ import {
   Award, 
   GraduationCap,
   Laptop,
-  Users
+  Users,
+  BookOpen,
+  PieChart,
+  Target,
+  Settings,
+  Monitor,
+  Search
 } from 'lucide-react';
 
 export function WhyEssex() {
@@ -372,6 +378,51 @@ export function ProgramOverview() {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function SubjectShowcase() {
+  const subjects = [
+    { name: 'Academic Writing', icon: BookOpen, desc: '석사 수준의 학술적 글쓰기와 비판적 사고 능력을 배양합니다.' },
+    { name: 'Marketing Management', icon: Target, desc: '시장 분석과 브랜드 전략 수립을 위한 핵심 마케팅 이론을 학습합니다.' },
+    { name: 'Human Resource Management', icon: Users, desc: '현대 비즈니스 환경에서의 조직 관리와 인적 자원 활용 전략을 다웁니다.' },
+    { name: 'Financial Management', icon: PieChart, desc: '기업의 재무 의사결정과 성과 평가를 위한 재무 제표 분석 능력을 배양합니다.' },
+    { name: 'Operations Management', icon: Settings, desc: '프로세스 최적화와 공급망 관리를 통한 운영 효율성 극대화 방안을 연구합니다.' },
+    { name: 'IT Management', icon: Monitor, desc: '비즈니스 경쟁력 확보를 위한 최신 정보 기술 트렌드와 관리 기법을 학습합니다.' },
+    { name: 'Business Strategy', icon: ShieldCheck, desc: '글로벌 시장에서의 경쟁 우위 확보를 위한 전략적 기획과 실행 방안을 논의합니다.' },
+    { name: 'Research Methods', icon: Search, desc: '데이터를 기반으로 한 비즈니스 분석과 논문 작성을 위한 연구 방법론을 습득합니다.' },
+  ];
+
+  return (
+    <section id="subjects" className="py-24 bg-white">
+      <div className="section-container">
+        <div className="text-center mb-20">
+          <span className="text-essex-purple font-bold tracking-widest uppercase text-sm mb-4 block">Course Introduction</span>
+          <h2 className="heading-lg">전문성을 완성하는 8가지 핵심 과목</h2>
+          <p className="text-sub">글로벌 비즈니스 리더가 갖추어야 할 필수 역량을 체계적으로 학습합니다.</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {subjects.map((subject, idx) => (
+            <motion.div
+              key={subject.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: idx * 0.05 }}
+              viewport={{ once: true }}
+              className="p-10 bg-gray-50 rounded-[2.5rem] border border-gray-100 hover:bg-white hover:shadow-2xl hover:border-essex-purple/20 transition-all group"
+            >
+              <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:bg-essex-purple group-hover:text-white transition-colors">
+                <subject.icon className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-essex-navy mb-4 leading-tight">{subject.name}</h3>
+              <p className="text-sm text-gray-500 leading-relaxed font-medium">
+                {subject.desc}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

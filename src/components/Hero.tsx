@@ -6,17 +6,11 @@ export default function Hero() {
     <section className="relative pt-4 pb-8 overflow-hidden">
       <div className="section-container">
         <div className="relative h-[480px] md:h-[580px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/10 group">
-          {/* Background Image - Bright Campus Photo */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"
-            style={{ 
-              backgroundImage: 'url("/essex_campus_library.jpg")',
-              backgroundPosition: 'center 40%'
-            }}
-          >
-            {/* Lighter Overlay for a brighter feel while maintaining readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-essex-navy/70 via-essex-navy/30 to-transparent z-10" />
-          </div>
+          {/* Background Gradient - Soft Navy + Deep Purple */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0E1129] to-[#2D1B69] transition-transform duration-1000 group-hover:scale-105" />
+          
+          {/* Subtle light effect */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(106,60,226,0.15)_0%,transparent_70%)]" />
 
           {/* Content */}
           <div className="relative z-20 h-full flex flex-col justify-center px-10 md:px-20 text-white">

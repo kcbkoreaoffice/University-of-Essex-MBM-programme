@@ -13,6 +13,7 @@ import {
   Roadmap, 
   LearningMethod, 
   TrustSection, 
+  SubjectShowcase,
   FinalCTA 
 } from './components/MainSections';
 import { 
@@ -34,7 +35,6 @@ export default function App() {
         <AcademicStrengths />
         <WhyMBM />
         <ProgramOverview />
-        <Curriculum />
         <CoreBenefits />
         <CostComparison />
         <Roadmap />
@@ -42,6 +42,7 @@ export default function App() {
         <AdmissionRequirements />
         <TuitionAndBenefits />
         <TrustSection />
+        <SubjectShowcase />
         <FinalCTA />
       </main>
       <Footer />
